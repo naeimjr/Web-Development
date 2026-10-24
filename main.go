@@ -4,7 +4,7 @@ import "fmt"
 
 var (
 	a  = 70
-	b  = 99
+	u  = 99
 	x  = 570
 	y  = 69
 	e  = 31
@@ -20,11 +20,11 @@ func printNum(num int) {
 }
 
 func add(a int, b int) {
-	res := a // b
+	res := a * b
 	printNum(res)
 }
 func main() {
-	add(a, b)
+	add(a, u)
 	add(a, w)
 	add(x, x)
 	add(e, xy)

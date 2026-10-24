@@ -4,7 +4,7 @@ import "fmt"
 
 var (
 	a = 10
-	b = 50
+	b = 49
 )
 
 func printNum(num int) {
