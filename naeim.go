@@ -7,12 +7,14 @@ var (
 	b = 50
 )
 
+func printNum(num int) {
+	fmt.Println(num)
+}
+
+func add(x int, y int) {
+	res := x + y
+	printNum(res)
+}
 func main() {
-	x := 18
-	if x >= 18 {
-
-		fmt.Println("im mature boy * 2")
-
-	}
-
+	add(a, b)
 }
