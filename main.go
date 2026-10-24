@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 var (
-	a  = 20
-	b  = 20
+	a  = 70
+	b  = 99
 	x  = 570
 	y  = 69
 	e  = 31
