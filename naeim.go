@@ -5,6 +5,8 @@ import "fmt"
 var (
 	a = 10
 	b = 50
+	c = 49
+	d = 87
 )
 
 func add(x int, y int) {
@@ -19,5 +21,7 @@ func main() {
 	add(a, p)
 	add(a, b)
 	add(a, q)
+	add(d, c)
+	add(b, c)
 
 }
