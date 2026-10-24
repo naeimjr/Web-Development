@@ -10,6 +10,9 @@ var (
 	e  = 31
 	w  = 999
 	xy = 101
+	mn = 1000
+	n  = 780
+	r  = 890
 )
 
 func printNum(num int) {
@@ -17,7 +20,7 @@ func printNum(num int) {
 }
 
 func add(a int, b int) {
-	res := a // xy
+	res := a // b
 	printNum(res)
 }
 func main() {
@@ -25,5 +28,7 @@ func main() {
 	add(a, w)
 	add(x, x)
 	add(e, xy)
+	add(w, mn)
+	add(mn, n)
 
 }
