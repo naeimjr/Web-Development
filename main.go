@@ -8,6 +8,6 @@ func main() {
 		c := a + b
 		fmt.Println(c)
 
-	}(5, 7)
+	}(5, 9)
 
 }
