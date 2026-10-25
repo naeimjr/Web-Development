@@ -2,33 +2,12 @@ package main
 
 import "fmt"
 
-var (
-	a  = 70
-	u  = 99
-	x  = 570
-	y  = 69
-	e  = 31
-	w  = 999
-	xy = 101
-	mn = 1000
-	n  = 780
-	r  = 890
-)
-
-func printNum(num int) {
-	fmt.Println(num)
-}
-
-func add(a int, b int) {
-	res := a * b
-	printNum(res)
-}
 func main() {
-	add(a, u)
-	add(a, w)
-	add(x, x)
-	add(e, xy)
-	add(w, mn)
-	add(mn, n)
+
+	add := func(a int, b int) {
+		c := a + b
+		fmt.Println(c)
+
+	}(5, 7)
 
 }

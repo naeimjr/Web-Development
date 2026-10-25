@@ -2,16 +2,15 @@ package main
 
 import "fmt"
 
-var a = 35
+func processOperation(a int, b int, op func(p int, q int)) {
+	op(a, b)
+}
+
+func add(x int, y int) {
+	z := x + y
+	fmt.Println(z)
+}
 
 func main() {
-	age := 30
-
-	if age >= 8 {
-		a := 47
-		fmt.Println(a)
-	}
-
-	fmt.Println(a)
-
+	processOperation(2, 5, add)
 }
