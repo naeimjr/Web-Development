@@ -4,10 +4,11 @@ import "fmt"
 
 func main() {
 
-	add := func(a int, b int) {
-		c := a + b
-		fmt.Println(c)
+	var arr [4]int
 
-	}(5, 9)
+	arr[3] = 9
+	arr[2] = 6
+	arr[1] = 3
 
+	fmt.Println(arr)
 }
