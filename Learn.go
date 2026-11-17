@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-const a = 100
+//const a = 100
 
-var p = 99
+//var p = 99
 
-func call() {
+//func call() {
 	add := func(x int, y int) {
 		z := x + y
 		fmt.Println(z)
@@ -14,10 +14,10 @@ func call() {
 	add(5, 6)
 	add(p, a)
 }
-func main() {
-	call()
-	fmt.Println(a)
+//func main () {
+	//call()
+	//fmt.Println(a)
 }
-func init() {
+//func init() {
 	fmt.Println("hello naeim")
 }

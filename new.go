@@ -31,7 +31,7 @@ func (usr User) call(a int) {
 	fmt.Println(a)
 }
 
-func main() {
+//func main() {
 	var user1 User
 	user1 = User{
 		Name:        "Naeim",

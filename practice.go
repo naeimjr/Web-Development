@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func processOperation(a int, b int, op func(p int, q int)) {
+//func processOperation(a int, b int, op func(p int, q int)) {
 	op(a, b)
 }
 
@@ -11,6 +11,6 @@ func add(x int, y int) {
 	fmt.Println(z)
 }
 
-func main() {
+//func main() {
 	processOperation(2, 5, add)
 }
