@@ -1,41 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
-type User struct {
-	Name        string
-	Age         int
-	Email       string
-	Sex         string
-	PhoneNumber string
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello World")
 }
 
-//func main() {
-	//var user1 User
-	//user1 = User{
-		//Name:        "Naeim\t \"Minhaj\"",
-		//Age:         24,
-		//Email:       "dm.naeim10@gmail.com",
-		//Sex:         "Male",
-		//PhoneNumber: "01736821626",
-	//}
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "I'm Habib. I'm youtuber. I'm software engineer.")
+}
 
-	fmt.Println("Name:", user1.Name)
-	fmt.Println("Age:", user1.Age)
-	fmt.Println("Email:", user1.Email)
-	fmt.Println("Sex:", user1.Sex)
-	fmt.Println("PhoneNumber:", user1.PhoneNumber)
-	fmt.Print("\n")
-	user2 := User{
-		Name:        "Minhaj\tNaeim",
-		Age:         30,
-		Email:       "dm.minhajsadik@gmail.com",
-		Sex:         "Male",
-		PhoneNumber: "01781583107",
+func main() {
+	mux := http.NewServeMux() // Router
+
+	mux.HandleFunc("/hello", helloHandler) // Route
+	mux.HandleFunc("/about", aboutHandler) // Route
+
+	fmt.Println("Server running on :3000")
+
+	err := http.ListenAndServe(":3000", mux)
+
+	if err != nil {
+		fmt.Println("Error starting the server:", err)
 	}
-	fmt.Println("Name:", user2.Name)
-	fmt.Println("Age:", user2.Age)
-	fmt.Println("Email:", user2.Email)
-	fmt.Println("Sex:", user2.Sex)
-	fmt.Println("PhoneNumber:", user2.PhoneNumber)
 }
